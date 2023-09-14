@@ -1,6 +1,8 @@
 
 from pathlib import Path, os
 from dotenv import load_dotenv
+import os
+
 
 load_dotenv()
 
@@ -48,7 +50,7 @@ ROOT_URLCONF = 'biblioteca.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
