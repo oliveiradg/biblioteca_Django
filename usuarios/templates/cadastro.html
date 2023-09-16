@@ -15,16 +15,16 @@
  
       <hr>
 
-      <form method="POST">
+      <form method="POST" action="{% url 'valida_cadastro'%}">{%csrf_token%}
         <br>
         <label>Nome</label>
-        <input class="form-control" type="text" placeholder="Nome...">
+        <input name="nome" class="form-control" type="text" placeholder="Nome...">
         <br/>
         <label>Email</label>
-        <input class="form-control" type="text" placeholder="Email...">
+        <input name="email" class="form-control" type="text" placeholder="Email...">
         <br/>
         <label>Senha</label>
-        <input class="form-control" type="text" placeholder="Senha...">
+        <input name="senha" class="form-control" type="text" placeholder="Senha...">
         <br/>
         <input class="btn btn-info btn-lg" type="submit" value="Enviar">
 
